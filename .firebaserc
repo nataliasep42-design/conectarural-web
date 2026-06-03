@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "conectarural-26759"
+  },
+  "targets": {
+    "conectarural-26759": {
+      "hosting": {
+        "landing": [
+          "conectarural-landing"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ConectaRural — Plataforma de alfabetización digital para mujeres en entornos rurales. Formación accesible, acompañamiento técnico personalizado y uso sin conexión." />
+  <meta property="og:title" content="ConectaRural — Alfabetización digital para mujeres rurales" />
+  <meta property="og:description" content="Formación digital adaptada, acompañamiento técnico y funcionamiento offline para mujeres en entornos rurales." />
+  <meta property="og:image" content="logo.png" />
+  <title>ConectaRural — Alfabetización digital para mujeres rurales</title>
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════
+       NAVEGACIÓN
+  ══════════════════════════════════════════════════ -->
+  <nav class="nav" id="nav" aria-label="Navegación principal">
+    <div class="nav__inner">
+      <a href="#inicio" class="nav__brand" aria-label="ConectaRural — Ir al inicio">
+        <img src="logo.png" alt="Logo ConectaRural" class="nav__logo" width="40" height="40" />
+        <span class="nav__name">ConectaRural</span>
+      </a>
+
+      <button class="nav__toggle" id="navToggle"
+        aria-label="Abrir menú de navegación"
+        aria-expanded="false"
+        aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__menu" id="navMenu" role="list">
+        <li><a href="#que-es"         class="nav__link">Qué es</a></li>
+        <li><a href="#como-funciona"  class="nav__link">Cómo funciona</a></li>
+        <li><a href="#funcionalidades" class="nav__link">Funcionalidades</a></li>
+        <li><a href="#perfiles"       class="nav__link">Para quién</a></li>
+        <li>
+          <!-- ▼ CAMBIAR: URL del APK ▼ -->
+          <a href="app-release.apk" class="nav__link nav__link--cta" download>
+            Descargar App
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════════════ -->
+  <section class="hero" id="inicio" aria-label="Presentación principal de ConectaRural">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__particles" aria-hidden="true">
+      <span></span><span></span><span></span>
+      <span></span><span></span><span></span>
+    </div>
+
+    <div class="container hero__content">
+      <img src="logo.png" alt="Logo ConectaRural" class="hero__logo" width="110" height="110" />
+      <h1 class="hero__title">ConectaRural</h1>
+      <p class="hero__tagline">Alfabetización digital para mujeres rurales</p>
+      <p class="hero__desc">
+        Una plataforma diseñada para acercar la tecnología a las mujeres de entornos rurales,
+        con formación adaptada a su realidad, acompañamiento técnico personalizado
+        y funcionamiento incluso sin conexión a internet.
+      </p>
+      <div class="hero__actions">
+        <!-- ▼ CAMBIAR: URL del APK ▼ -->
+        <a href="app-release.apk" class="btn btn--primary" id="btnDescargarHero" download>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Descargar App
+        </a>
+        <!-- ▼ CAMBIAR: URL del panel de gestión ▼ -->
+        <a href="https://conectarural-26759.web.app" class="btn btn--outline" target="_blank" rel="noopener noreferrer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+          </svg>
+          Acceder al Panel
+        </a>
+      </div>
+    </div>
+
+    <div class="hero__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 50 C360 100 1080 0 1440 50 L1440 100 L0 100 Z" fill="#F8F5EF"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       QUÉ ES
+  ══════════════════════════════════════════════════ -->
+  <section class="section" id="que-es" aria-labelledby="h-que-es">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">El proyecto</span>
+        <h2 class="section__title" id="h-que-es">¿Qué es ConectaRural?</h2>
+      </div>
+
+      <div class="que-es__grid">
+        <div class="que-es__text reveal">
+          <p class="lead">
+            ConectaRural es un sistema integral de alfabetización digital orientado a mujeres en
+            entornos rurales. Combina una aplicación móvil Android con una plataforma web de gestión
+            para técnicas y administradoras.
+          </p>
+          <p>
+            La aplicación permite que las usuarias accedan a formación tecnológica adaptada a su
+            realidad: cursos organizados en módulos con vídeos y documentos, contenido descargable
+            para usar sin internet y seguimiento de su propio progreso.
+          </p>
+          <p>
+            Las técnicas acompañan el avance de las usuarias a su cargo y responden sus consultas.
+            Las administradoras gestionan el catálogo de cursos, los usuarios del sistema y las
+            asignaciones entre técnicas y usuarias desde un panel web centralizado.
+          </p>
+        </div>
+
+        <div class="que-es__cards" aria-label="Características principales">
+          <div class="mini-card reveal">
+            <div class="mini-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+              </svg>
+            </div>
+            <strong>Cursos y módulos</strong>
+            <span>Contenido formativo estructurado y adaptado al nivel de cada usuaria</span>
+          </div>
+          <div class="mini-card reveal">
+            <div class="mini-card__icon mini-card__icon--green" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+            </div>
+            <strong>Uso sin conexión</strong>
+            <span>Descarga el contenido y sigue aprendiendo aunque no haya señal</span>
+          </div>
+          <div class="mini-card reveal">
+            <div class="mini-card__icon mini-card__icon--yellow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <strong>3 perfiles de usuario</strong>
+            <span>Usuaria, técnica y administradora con accesos diferenciados</span>
+          </div>
+          <div class="mini-card reveal">
+            <div class="mini-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>
+              </svg>
+            </div>
+            <strong>Progreso en tiempo real</strong>
+            <span>Seguimiento del avance de cada usuaria visible para técnicas y admin</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       EL PROBLEMA
+  ══════════════════════════════════════════════════ -->
+  <section class="section section--dark" id="problema" aria-labelledby="h-problema">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag section__tag--light">El reto</span>
+        <h2 class="section__title section__title--light" id="h-problema">La brecha digital en el entorno rural</h2>
+        <p class="section__subtitle section__subtitle--light">
+          Las mujeres rurales enfrentan obstáculos concretos para acceder a la formación digital.
+          ConectaRural nace para responder a esa realidad.
+        </p>
+      </div>
+
+      <div class="problema__grid">
+        <article class="problema-card reveal">
+          <div class="problema-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="1" y1="1" x2="23" y2="23"/>
+              <path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"/>
+              <path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"/>
+              <path d="M10.71 5.05A16 16 0 0 1 22.56 9"/>
+              <path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"/>
+              <path d="M8.53 16.11a6 6 0 0 1 6.95 0"/>
+              <line x1="12" y1="20" x2="12.01" y2="20"/>
+            </svg>
+          </div>
+          <h3>Conectividad limitada</h3>
+          <p>Las zonas rurales tienen cobertura de internet irregular o inexistente, lo que dificulta el acceso a recursos digitales que dependen de la nube.</p>
+        </article>
+
+        <article class="problema-card reveal">
+          <div class="problema-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+          </div>
+          <h3>Formación no adaptada</h3>
+          <p>La mayoría de los recursos digitales disponibles no están diseñados para personas con poca experiencia tecnológica ni para las condiciones del medio rural.</p>
+        </article>
+
+        <article class="problema-card reveal">
+          <div class="problema-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+          </div>
+          <h3>Ausencia de acompañamiento</h3>
+          <p>Aprender tecnología de forma autodidacta es difícil. Sin una persona de referencia que resuelva dudas y acompañe el proceso, el abandono es muy probable.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="wave-bottom" aria-hidden="true">
+      <svg viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 50 C360 0 1080 100 1440 50 L1440 100 L0 100 Z" fill="#FFFFFF"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       CÓMO FUNCIONA
+  ══════════════════════════════════════════════════ -->
+  <section class="section section--white" id="como-funciona" aria-labelledby="h-como-funciona">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">El proceso</span>
+        <h2 class="section__title" id="h-como-funciona">Cómo funciona ConectaRural</h2>
+        <p class="section__subtitle">
+          Un proceso sencillo, pensado para que cualquier mujer pueda comenzar su camino digital
+          sin necesidad de conocimientos previos.
+        </p>
+      </div>
+
+      <ol class="steps" aria-label="Pasos del proceso de uso">
+        <li class="step reveal">
+          <div class="step__badge" aria-hidden="true">1</div>
+          <div class="step__content">
+            <h3>Registro e inicio de sesión</h3>
+            <p>La administradora da de alta a las usuarias y técnicas en el sistema. Cada persona accede con sus propias credenciales desde la app o desde la web de gestión.</p>
+          </div>
+        </li>
+        <li class="step reveal">
+          <div class="step__badge" aria-hidden="true">2</div>
+          <div class="step__content">
+            <h3>Explorar el catálogo de cursos</h3>
+            <p>Las usuarias pueden consultar los cursos disponibles, ver su descripción y nivel, e inscribirse en los que les interesen a través de la aplicación móvil.</p>
+          </div>
+        </li>
+        <li class="step reveal">
+          <div class="step__badge" aria-hidden="true">3</div>
+          <div class="step__content">
+            <h3>Descargar para usar sin internet</h3>
+            <p>Antes de perder la conexión, las usuarias pueden descargar los módulos en su dispositivo. Cuando no haya señal, el contenido seguirá disponible para consultarlo.</p>
+          </div>
+        </li>
+        <li class="step reveal">
+          <div class="step__badge" aria-hidden="true">4</div>
+          <div class="step__content">
+            <h3>Seguir los módulos a su ritmo</h3>
+            <p>Cada curso está dividido en módulos con vídeos y documentos. El progreso se guarda automáticamente y se sincroniza con el servidor cuando vuelve la conexión.</p>
+          </div>
+        </li>
+        <li class="step reveal">
+          <div class="step__badge" aria-hidden="true">5</div>
+          <div class="step__content">
+            <h3>Consultar a la técnica de apoyo</h3>
+            <p>Si surge una duda, la usuaria puede enviar una consulta a su técnica asignada directamente desde la app. La técnica recibe una notificación y responde desde el panel web.</p>
+          </div>
+        </li>
+        <li class="step reveal">
+          <div class="step__badge" aria-hidden="true">6</div>
+          <div class="step__content">
+            <h3>Seguimiento del progreso</h3>
+            <p>La usuaria consulta su avance en cada curso. La técnica y la administradora también tienen visibilidad del progreso del conjunto de usuarias a su cargo.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       FUNCIONALIDADES
+  ══════════════════════════════════════════════════ -->
+  <section class="section" id="funcionalidades" aria-labelledby="h-funcionalidades">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">Funcionalidades</span>
+        <h2 class="section__title" id="h-funcionalidades">Qué ofrece la plataforma</h2>
+        <p class="section__subtitle">
+          ConectaRural integra en una sola plataforma todo lo que necesitan usuarias,
+          técnicas y administradoras para gestionar y seguir el proceso formativo.
+        </p>
+      </div>
+
+      <div class="features__grid">
+
+        <article class="feature-card reveal">
+          <div class="feature-card__icon feature-card__icon--teal" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+            </svg>
+          </div>
+          <h3>Cursos y módulos</h3>
+          <p>Catálogo de cursos estructurado en módulos con vídeos y documentos. Las usuarias se inscriben y siguen su formación a su propio ritmo desde la app Android.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-card__icon feature-card__icon--green" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+          </div>
+          <h3>Descargas para uso offline</h3>
+          <p>Los módulos se pueden descargar en el dispositivo para consultarlos sin internet. El progreso registrado sin conexión se sincroniza automáticamente al volver la señal.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-card__icon feature-card__icon--yellow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>
+            </svg>
+          </div>
+          <h3>Seguimiento del progreso</h3>
+          <p>Cada usuaria ve su avance en los cursos inscritos. Las técnicas y administradoras tienen visibilidad del progreso del conjunto de usuarias asignadas a su cargo.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-card__icon feature-card__icon--teal" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+          </div>
+          <h3>Consultas a la técnica</h3>
+          <p>Las usuarias pueden enviar incidencias y consultas a su técnica de apoyo directamente desde la app. La técnica las gestiona y responde desde su panel o desde la app.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-card__icon feature-card__icon--green" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+            </svg>
+          </div>
+          <h3>Notificaciones push</h3>
+          <p>El sistema envía notificaciones a las usuarias y técnicas cuando hay nuevas consultas, respuestas o novedades relevantes, manteniendo a todos al tanto en tiempo real.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-card__icon feature-card__icon--yellow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+          </div>
+          <h3>Panel de gestión web</h3>
+          <p>Interfaz web para técnicas y administradoras. Permite gestionar usuarias, cursos, módulos, asignaciones e incidencias desde cualquier navegador, sin necesidad de la app.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       PERFILES
+  ══════════════════════════════════════════════════ -->
+  <section class="section section--white" id="perfiles" aria-labelledby="h-perfiles">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">Para quién</span>
+        <h2 class="section__title" id="h-perfiles">Tres perfiles, una misma plataforma</h2>
+        <p class="section__subtitle">
+          ConectaRural está pensado para tres tipos de personas con necesidades y
+          responsabilidades distintas dentro del sistema.
+        </p>
+      </div>
+
+      <div class="perfiles__grid">
+
+        <article class="perfil-card reveal">
+          <div class="perfil-card__header perfil-card__header--usuaria">
+            <div class="perfil-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+              </svg>
+            </div>
+            <h3>Usuaria rural</h3>
+          </div>
+          <ul class="perfil-card__list" role="list">
+            <li>Accede al catálogo de cursos de formación digital</li>
+            <li>Se inscribe en los cursos que le interesan</li>
+            <li>Descarga módulos para usarlos sin internet</li>
+            <li>Consulta vídeos y documentos formativos</li>
+            <li>Registra y consulta su progreso en cada curso</li>
+            <li>Envía consultas a su técnica de apoyo asignada</li>
+            <li>Recibe notificaciones sobre su formación</li>
+          </ul>
+          <div class="perfil-card__footer">
+            <span class="perfil-card__tool">Acceso mediante</span>
+            <strong>App Android</strong>
+          </div>
+        </article>
+
+        <article class="perfil-card reveal">
+          <div class="perfil-card__header perfil-card__header--tecnica">
+            <div class="perfil-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h3>Técnica de apoyo</h3>
+          </div>
+          <ul class="perfil-card__list" role="list">
+            <li>Gestiona las usuarias asignadas a su cargo</li>
+            <li>Visualiza el progreso de cada usuaria en los cursos</li>
+            <li>Recibe y gestiona consultas e incidencias</li>
+            <li>Responde a las usuarias desde el panel o la app</li>
+            <li>Recibe notificaciones push de nueva actividad</li>
+            <li>Accede a los cursos disponibles en la plataforma</li>
+          </ul>
+          <div class="perfil-card__footer">
+            <span class="perfil-card__tool">Acceso mediante</span>
+            <strong>App Android + Panel web</strong>
+          </div>
+        </article>
+
+        <article class="perfil-card reveal">
+          <div class="perfil-card__header perfil-card__header--admin">
+            <div class="perfil-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+              </svg>
+            </div>
+            <h3>Administradora</h3>
+          </div>
+          <ul class="perfil-card__list" role="list">
+            <li>Gestiona el catálogo completo de cursos y módulos</li>
+            <li>Da de alta y administra usuarias y técnicas</li>
+            <li>Asigna técnicas a las usuarias del sistema</li>
+            <li>Consulta estadísticas globales de la plataforma</li>
+            <li>Visualiza y gestiona todas las incidencias abiertas</li>
+            <li>Sube contenido multimedia a los módulos formativos</li>
+          </ul>
+          <div class="perfil-card__footer">
+            <span class="perfil-card__tool">Acceso mediante</span>
+            <strong>Panel web de administración</strong>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       OFFLINE
+  ══════════════════════════════════════════════════ -->
+  <section class="section section--offline" id="offline" aria-labelledby="h-offline">
+    <div class="wave-top" aria-hidden="true">
+      <svg viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 50 C360 100 1080 0 1440 50 L1440 0 L0 0 Z" fill="#FFFFFF"/>
+      </svg>
+    </div>
+
+    <div class="container offline__inner">
+      <div class="offline__visual reveal" aria-hidden="true">
+        <div class="offline__icon-wrap">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="40" r="36" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+            <path d="M22 48 C22 37 30 28 40 28 C50 28 58 37 58 48" stroke="rgba(255,255,255,0.6)" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M28 48 C28 40 34 33 40 33 C46 33 52 40 52 48" stroke="rgba(255,255,255,0.5)" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="40" cy="48" r="3" fill="white"/>
+            <line x1="18" y1="62" x2="62" y2="18" stroke="rgba(255,255,255,0.35)" stroke-width="2" stroke-linecap="round"/>
+            <path d="M34 60 L40 54 L46 60" stroke="rgba(255,255,255,0.7)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M40 54 L40 68" stroke="rgba(255,255,255,0.7)" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="40" cy="40" r="38" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+          </svg>
+        </div>
+        <div class="offline__badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+          Funciona sin señal
+        </div>
+      </div>
+
+      <div class="offline__text reveal">
+        <span class="section__tag section__tag--light">Diseñada para la realidad rural</span>
+        <h2 class="section__title section__title--light" id="h-offline">Funciona incluso sin conexión</h2>
+        <p>
+          Una de las características más importantes de ConectaRural es que no depende de tener
+          internet en todo momento. Las usuarias pueden descargar los módulos de sus cursos cuando
+          disponen de conexión —en casa de una vecina, en el centro municipal, o con datos
+          móviles— y después acceder a ese contenido desde cualquier lugar, sin señal.
+        </p>
+        <p>
+          El progreso registrado sin conexión se sincroniza automáticamente cuando el dispositivo
+          vuelve a tener acceso a internet, sin que la usuaria tenga que hacer nada.
+          El aprendizaje nunca se interrumpe por falta de cobertura.
+        </p>
+
+        <ul class="offline__list" role="list">
+          <li>
+            <span class="offline__check" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            Módulos descargables directamente en el dispositivo
+          </li>
+          <li>
+            <span class="offline__check" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            Progreso guardado localmente aunque no haya señal
+          </li>
+          <li>
+            <span class="offline__check" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            Sincronización automática al recuperar la conexión
+          </li>
+          <li>
+            <span class="offline__check" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            Diseñada para dispositivos con conectividad limitada
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wave-bottom" aria-hidden="true">
+      <svg viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 50 C360 0 1080 100 1440 50 L1440 100 L0 100 Z" fill="#FFFFFF"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       ACOMPAÑAMIENTO
+  ══════════════════════════════════════════════════ -->
+  <section class="section section--white" id="acompanamiento" aria-labelledby="h-acompanamiento">
+    <div class="container">
+      <div class="acompanamiento__grid">
+        <div class="acompanamiento__text reveal">
+          <span class="section__tag">Acompañamiento técnico</span>
+          <h2 class="section__title" id="h-acompanamiento">Nadie aprende sola</h2>
+          <p class="lead">
+            Aprender a usar la tecnología puede ser intimidante. Por eso ConectaRural incluye
+            un sistema de acompañamiento personal: cada usuaria tiene asignada una técnica de apoyo
+            que la acompaña durante todo su proceso de aprendizaje.
+          </p>
+          <p>
+            Las usuarias pueden enviar consultas e incidencias desde la app en cualquier momento.
+            La técnica asignada recibe una notificación push y puede responder desde el panel web
+            o desde su propia app, manteniendo un canal de comunicación directo y cercano.
+          </p>
+          <p>
+            Las administradoras gestionan las asignaciones entre técnicas y usuarias, pueden
+            reasignarlas cuando sea necesario y tienen visibilidad completa de todas las incidencias
+            abiertas en el sistema.
+          </p>
+        </div>
+
+        <div class="acompanamiento__flow reveal" aria-label="Proceso de consulta">
+          <div class="flow-item">
+            <div class="flow-item__icon flow-item__icon--teal" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+              </svg>
+            </div>
+            <div class="flow-item__text">
+              <strong>Usuaria envía una consulta</strong>
+              <span>Desde la app Android, en cualquier momento</span>
+            </div>
+          </div>
+          <div class="flow-connector" aria-hidden="true">
+            <svg width="2" height="32" viewBox="0 0 2 32" fill="none">
+              <line x1="1" y1="0" x2="1" y2="32" stroke="#D4E6CC" stroke-width="2" stroke-dasharray="4 3"/>
+            </svg>
+            <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+              <path d="M6 8 L0 0 L12 0 Z" fill="#D4E6CC"/>
+            </svg>
+          </div>
+          <div class="flow-item">
+            <div class="flow-item__icon flow-item__icon--yellow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+              </svg>
+            </div>
+            <div class="flow-item__text">
+              <strong>Técnica recibe notificación</strong>
+              <span>Notificación push inmediata en su dispositivo</span>
+            </div>
+          </div>
+          <div class="flow-connector" aria-hidden="true">
+            <svg width="2" height="32" viewBox="0 0 2 32" fill="none">
+              <line x1="1" y1="0" x2="1" y2="32" stroke="#D4E6CC" stroke-width="2" stroke-dasharray="4 3"/>
+            </svg>
+            <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+              <path d="M6 8 L0 0 L12 0 Z" fill="#D4E6CC"/>
+            </svg>
+          </div>
+          <div class="flow-item">
+            <div class="flow-item__icon flow-item__icon--green" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              </svg>
+            </div>
+            <div class="flow-item__text">
+              <strong>Técnica responde a la usuaria</strong>
+              <span>Desde el panel web o desde su propia app</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       DESCARGA Y PANEL
+  ══════════════════════════════════════════════════ -->
+  <section class="section section--cta" id="descargar" aria-labelledby="h-cta">
+    <div class="container">
+      <div class="section__header reveal">
+        <h2 class="section__title section__title--light" id="h-cta">Empieza ahora</h2>
+        <p class="section__subtitle section__subtitle--light">
+          Descarga la app en tu móvil Android o accede al panel de gestión desde el navegador.
+        </p>
+      </div>
+
+      <div class="cta-grid">
+
+        <article class="cta-card reveal">
+          <div class="cta-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/>
+            </svg>
+          </div>
+          <h3>App Android</h3>
+          <p>Descarga la aplicación ConectaRural en tu dispositivo Android. Disponible como APK de instalación directa.</p>
+          <p class="cta-card__note">Compatible con Android 5.0 o superior</p>
+          <!-- ▼ CAMBIAR: URL del APK ▼ -->
+          <a href="app-release.apk" class="btn btn--white" download>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Descargar APK
+          </a>
+          <span class="cta-card__hint">Versión 1.0.0 · Instalación directa</span>
+        </article>
+
+        <article class="cta-card reveal">
+          <div class="cta-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+          </div>
+          <h3>Panel de gestión</h3>
+          <p>Accede al panel web para técnicas y administradoras. Gestiona usuarios, cursos, asignaciones e incidencias desde cualquier navegador.</p>
+          <p class="cta-card__note">Requiere credenciales de técnica o administradora</p>
+          <!-- ▼ CAMBIAR: URL del panel de gestión ▼ -->
+          <a href="https://conectarural-26759.web.app" class="btn btn--white" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+              <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+            Acceder al panel
+          </a>
+          <span class="cta-card__hint">Para técnicas y administradoras</span>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <img src="logo.png" alt="Logo ConectaRural" class="footer__logo" width="36" height="36" />
+          <span>ConectaRural</span>
+        </div>
+        <p class="footer__desc">Plataforma de alfabetización digital para mujeres en entornos rurales</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Navegación del pie de página">
+        <a href="#que-es">Qué es</a>
+        <a href="#problema">El problema</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#funcionalidades">Funcionalidades</a>
+        <a href="#perfiles">Para quién</a>
+        <a href="#offline">Offline</a>
+        <a href="#descargar">Descargar</a>
+      </nav>
+
+      <p class="footer__copy">
+        Proyecto de Fin de Ciclo &middot; Desarrollado con dedicación para el medio rural
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
